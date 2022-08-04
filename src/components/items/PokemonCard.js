@@ -1,6 +1,7 @@
 import { useEffect,useState } from "react";
 import {Link} from 'react-router-dom';
 import {getPokeItem, getPokeKor} from '../../apis/PokemonAPI'
+import './PokemonCard.css'
 
 function PokemonCard({ pokemon }) {
     const [id,setId] = useState();
@@ -28,7 +29,7 @@ function PokemonCard({ pokemon }) {
     
     return (
         <Link to={`/pokemons/${id}`}>
-            <div>
+            <div className="poke-card-wrapper" style={id>=900?{display:'none'}:{}}>
                 {id&&<h2>No.{id}</h2>}
                 {img&&<img src={img}/>}
                 <h3>{ name }</h3>
