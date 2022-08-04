@@ -1,7 +1,7 @@
 import { createActions, handleActions } from "redux-actions";
 
 /* 초기 state값 */
-const initialState = [
+const pokemonListState = [
     {}
 ];
 
@@ -20,7 +20,7 @@ const pokemonListReducer = handleActions(
             return payload;
         }
     },
-    initialState
+    pokemonListState
 );
 
 export default pokemonListReducer;

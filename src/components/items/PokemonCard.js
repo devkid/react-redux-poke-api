@@ -13,9 +13,17 @@ function PokemonCard({ pokemon }) {
                 setId(json.id);
                 setImg(json.sprites.front_default);
             });
-            getPokeKor()
         },
         []
+    )
+
+    useEffect(
+        ()=>{
+            getPokeKor(id).then(json=>{
+                setName(json.names[2].name);
+            });
+        },
+        [id]
     )
     
     return (
@@ -23,7 +31,7 @@ function PokemonCard({ pokemon }) {
             <div>
                 {id&&<h2>No.{id}</h2>}
                 {img&&<img src={img}/>}
-                <h3>{ pokemon.name }</h3>
+                <h3>{ name }</h3>
             </div>
         </Link>
     );
