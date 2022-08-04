@@ -1,10 +1,9 @@
 import { GET_POKEMONS } from "../modules/PokemonModule";
+import { GET_POKEMONDETAILS, GET_POKEMONLOCATION, GET_POKEMONSPECIES } from "../modules/PokemonDetailModule";
 
 export function callGetPokemonsAPI(url, params) {
 
     const requestURL = url || 'https://pokeapi.co/api/v2/pokemon'; 
-    console.log(url);
-
     return async function getPokemons(dispatch, getState) {
 
         const result = await fetch(requestURL).then(res=>res.json())
@@ -25,6 +24,30 @@ export function callGetPokemonsAPI(url, params) {
     }
 }
 
-export function callGetPokemonDetailsAPI(result, params){
+export function callGetPokemonDetailsAPI(id, params){
 
+    
+
+    const requestURL = `https://pokeapi.co/api/v2/pokemon/${id}/`
+    return async function getPokemonDetails(dispatch, getState){
+        const result = await fetch(requestURL).then(res=>res.json());
+
+        dispatch({type:GET_POKEMONDETAILS, payload: result});
+    }
+}
+
+export function callGetPokemonSpeciesAPI(id, params){
+    const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${id}/`
+    return async function getPokemonDetails(dispatch, getState){
+        const result = await fetch(requestURL).then(res=>res.json());
+        dispatch({type:GET_POKEMONSPECIES, payload: result});
+    }
+}
+
+export function callGetPokemonLocationAPI(id, params){
+    const requestURL = `https://pokeapi.co/api/v2/pokemon/${id}/encounters`
+    return async function getPokemonDetails(dispatch, getState){
+        const result = await fetch(requestURL).then(res=>res.json());
+        dispatch({type:GET_POKEMONLOCATION, payload: result});
+    }
 }

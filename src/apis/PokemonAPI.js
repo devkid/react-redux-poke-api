@@ -4,7 +4,12 @@ export function getPokeItem(pokemon){
 }
 
 export function getPokeKor(pokeCode){
-    const url = `https://pokeapi.co/api/v2/pokemon-species/${pokeCode}/`
-    return fetch(url)
+
+    if(pokeCode===undefined){
+        pokeCode = 1;
+    }
+
+    const requestUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokeCode}/`
+    return fetch(requestUrl)
             .then(response=>response.json())
 }

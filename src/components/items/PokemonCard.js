@@ -27,7 +27,7 @@ function PokemonCard({ pokemon }) {
     )
     
     return (
-        <Link to={`/pokemon/${id}`}>
+        <Link to={`/pokemons/${id}`}>
             <div>
                 {id&&<h2>No.{id}</h2>}
                 {img&&<img src={img}/>}
