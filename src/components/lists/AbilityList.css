@@ -1,0 +1,29 @@
+.count-and-button{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.button-wrapper{
+    margin-left: 10px;
+}
+
+.button-wrapper button{
+    margin: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+
+    font-size: 20px;
+    color: rgba(13, 67, 183, 0.63);
+}
+
+.button-wrapper button:hover{
+    transform: scale(1.05);
+    color: black;
+
+    transition: 0.5s;
+}
+
+.cards-wrapper{
+    margin: 10px 20px;
+}

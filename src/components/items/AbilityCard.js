@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import {Link} from 'react-router-dom';
+import './AbilityCard.css'
 
 function AbilityCard({ ability }) {
 
@@ -8,11 +9,13 @@ function AbilityCard({ ability }) {
     const abilityCode = ability.url.match(regExp).toString().replace('/','');
     
     return (
-        <Link to={`/abilities/${abilityCode}`}>
+        <Link to={`/abilities/${abilityCode}`} style={{textDecoration:'none'}}>
             {ability&&
-            <h3>
-                {abilityCode}. {ability.name}
-            </h3>
+            <div className="ability-card">
+                <span>
+                    [{abilityCode}] {ability.name}
+                </span>
+            </div>
             }
         </Link>
     );

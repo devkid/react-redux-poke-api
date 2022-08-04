@@ -1,0 +1,9 @@
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li{
+    text-decoration-line: none;
+    color: white;
+}

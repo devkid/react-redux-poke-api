@@ -1,7 +1,15 @@
+import './Header.css'
+import Navbar from './Navbar';
+
 function Header() {
     
     return (
-        <h1>포켓몬 API 호출 연습</h1>
+        <header className='header'>
+            <h1>Pokemon API</h1>
+            <nav>
+                <Navbar/>
+            </nav>
+        </header>
     );
 }
 

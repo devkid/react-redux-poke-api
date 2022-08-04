@@ -1,0 +1,31 @@
+.ability-name h2{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.kor-name{
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.kor{
+    background-color: gray;
+    padding: 3px 5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.331);
+}
+
+.ability-effect{
+    margin-left: 15px;
+}
+.ability-effect p{
+    margin: 10px;
+}
+
+.ability-pokemons{
+    margin:15px;
+    margin-top: 30px;
+}

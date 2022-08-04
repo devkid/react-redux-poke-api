@@ -29,7 +29,7 @@ function PokemonCard({ pokemon }) {
     
     return (
         <Link to={`/pokemons/${id}`}>
-            <div className="poke-card-wrapper" style={id>=900?{display:'none'}:{}}>
+            <div className="poke-card-wrapper" style={id>=850?{display:'none'}:{}}>
                 {id&&<h2>No.{id}</h2>}
                 {img&&<img src={img}/>}
                 <h3>{ name }</h3>

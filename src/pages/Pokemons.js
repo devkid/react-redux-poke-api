@@ -1,4 +1,5 @@
 import PokemonList from "../components/lists/PokemonList";
+import './Pokemons.css'
 
 function Pokemons() {
 

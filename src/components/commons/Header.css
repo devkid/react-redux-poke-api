@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+
+    padding: 10px;
+
+}
+.header h1{
+    margin: 0;
+}

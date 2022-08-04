@@ -1,5 +1,4 @@
 export function getPokeItem(pokemon){
-    console.log(pokemon)
     return fetch(pokemon.url)
             .then(response => response.json())
 }

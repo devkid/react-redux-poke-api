@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {callGetAbilityDetailsAPI} from '../../apis/AbilityAPICalls'
 import PokemonCard from "../items/PokemonCard";
+import './AbilityDetails.css'
 
 function AbilityDetails() {
     const result = useSelector(state => state.abilityDetailReducer);
@@ -20,9 +21,10 @@ function AbilityDetails() {
 
         <>            
         {Object.keys(result).length!==0&&(<>
-
-        <h2>{result.name}</h2>
-        <div>KOR : {result.names[1].name}</div>
+        <div className="ability-name">
+            <h2>{result.name}</h2>
+            <div className="kor-name"><span className="kor">KOR</span> {result.names[1].name}</div>
+        </div>
         <div className="ability-effect">
             <h3>효과</h3>
             <p>{result['effect_entries'][1].effect}</p>
@@ -38,7 +40,6 @@ function AbilityDetails() {
                 const pok = {
                     'url' : poke.pokemon.url
                 };
-                console.log(poke)
                 // console.log(poke);
                 // return <div key={poke.pokemon.url}>{poke.pokemon.name}</div>
                 return <PokemonCard key = {poke.pokemon.url} pokemon={pok}/>

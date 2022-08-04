@@ -1,0 +1,25 @@
+.ability-card{
+    margin: 7px;
+}
+
+.ability-card span{
+    padding: 2px;
+    margin: 3px;
+    background-color: rgba(56, 148, 175, 0.1);
+
+    color: black;
+    font-weight: bold;
+
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 3px;
+
+    text-decoration: none;
+    
+}
+
+.ability-card span:hover{
+    color: white;
+    background-color: black;
+    
+    transition: 0.2s;
+}

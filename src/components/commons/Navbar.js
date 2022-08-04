@@ -1,13 +1,15 @@
 import { NavLink } from 'react-router-dom';
 
+import './Navbar.css'
+
 function Navbar() {
 
     return (
-        <div>
+        <div className='navbar'>
             <ul>
-                <li><NavLink to='/'>메인으로</NavLink></li>
-                <li><NavLink to='/pokemons'>포켓몬 목록 보기</NavLink></li>
-                <li><NavLink to='/abilities'>어빌리티 목록 보기</NavLink></li>
+                <NavLink to='/'><li>메인으로</li></NavLink>
+                <NavLink to='/pokemons'><li>포켓몬 목록 보기</li></NavLink>
+                <NavLink to='/abilities'><li>어빌리티 목록 보기</li></NavLink>
             </ul>
         </div>
     );
