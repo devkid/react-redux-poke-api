@@ -1,13 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { callGetPokemonDetailsAPI, callGetPokemonSpeciesAPI, callGetPokemonLocationAPI } from "../../apis/PokemonAPICalls";
+import AbilityCard from "../items/AbilityCard";
 
 function PokemonDetails() {
     const result = useSelector(state => state.pokemonDetailReducer);
     const {pokeCode} = useParams();
 
     const dispatch = useDispatch();
+    
+    
 
     useEffect(
         () => {
@@ -54,13 +57,14 @@ function PokemonDetails() {
             }
             {result.details&&
             <div className="poke-abilities">
-                <h3>포켓몬 특성</h3>
+                <h3>포켓몬 어빌리티</h3>
                 <div className="poke-abilities-list">
                     {result.details.abilities.map(
                         ability=>(
                             <div key={ability.ability.url}>
                                 {ability['is_hidden']? (<b>[히든특성]</b>):(<b>[일반특성]</b>)}
-                                <span>{ability.ability.name}</span>
+                                {/* <span>{ability.ability.name}</span> */}
+                                <AbilityCard ability={ability.ability}/>
                             </div>
                         )
                     )}

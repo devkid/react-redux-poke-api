@@ -1,13 +1,13 @@
-import PokemonList from "../components/lists/PokemonList";
+import AbilityList from "../components/lists/AbilityList";
 
-function Pokemons() {
+function Abilities() {
 
     return (
         <div>
             <h1>어빌리티 종류</h1>
-            <PokemonList/>
+            <AbilityList/>
         </div>
     );
 }
 
-export default Pokemons;
+export default Abilities;
